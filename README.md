@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Apply for a [Twitter developer account](https://developer.twitter.com/en)
+1. Apply for a [Twitter developer account](https://developer.twitter.com/en). If asked about which API endpoints will be used, say the _v1.1 Premium Search APIs_.
 2. Open the [Twitter Developer Portal](https://developer.twitter.com/en/portal/dashboard)
 3. Within **Projects and Apps**, click on **Overview** and create a MicroMob project and application
 4. Within the app, select the **Keys and tokens** tab and generate a **Bearer Token**. This token will be used to authenicate your Twitter API requests. Be sure to copy the value of the token because it will only be displayed once (although it can be regenerated).
