@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "9b2d9918-6911-4b25-b062-a46487e12d68",
+		"name": "MicroMob - Twitter API",
+		"description": "This collection provides access to Twitter's API in order to support the University of Denver's [MicroMob project](https://www.du.edu/korbel/sie/research/micromob.html).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search Tweets Full Archive",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":\"#blacklivesmatter has:images\",\n    \"maxResults\":\"10\",\n    \"fromDate\":\"202003010000\",\n    \"toDate\":\"202006050000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.twitter.com/1.1/tweets/search/fullarchive/{{ENVIRONMENT_LABEL}}.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitter",
+						"com"
+					],
+					"path": [
+						"1.1",
+						"tweets",
+						"search",
+						"fullarchive",
+						"{{ENVIRONMENT_LABEL}}.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Tweets 30 Days",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":\"#blacklivesmatter has:images\",\n    \"maxResults\":\"10\",\n    \"fromDate\":\"202003010000\",\n    \"toDate\":\"202006050000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.twitter.com/1.1/tweets/search/fullarchive/{{ENVIRONMENT_LABEL}}.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitter",
+						"com"
+					],
+					"path": [
+						"1.1",
+						"tweets",
+						"search",
+						"fullarchive",
+						"{{ENVIRONMENT_LABEL}}.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f5303ce0-a96a-45e7-8c4a-65738a79c990",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4ce8ea64-c266-4096-971b-9bc0b3df5a69",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2da8d60b-0168-425e-8cf3-f3d4e7185620",
+			"key": "TOKEN",
+			"value": ""
+		},
+		{
+			"id": "be735839-73be-44f7-902d-fec8041bf916",
+			"key": "ENVIRONMENT_LABEL",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
